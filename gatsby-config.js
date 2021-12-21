@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Underbiking`,
     author: {
-      name: `Kyle Mathews`,
+      name: `Zach Hale`,
       summary: `who lives and works in San Francisco building useful things.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Stories of Bicycle Adventures by Zach Hale`,
+    siteUrl: `https://underbiking.gatsbyjs.io/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `zachhale`,
     },
   },
   plugins: [
