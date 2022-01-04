@@ -3,13 +3,14 @@ module.exports = {
     title: `Underbiking`,
     author: {
       name: `Zach Hale`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      summary: `who lives in Seattle and rides bikes a lot.`,
     },
     description: `Stories of Bicycle Adventures by Zach Hale`,
     siteUrl: `https://underbiking.gatsbyjs.io/`,
-    social: {
-      twitter: `zachhale`,
-    },
+    // social: {
+    //   instagram: `zachhale`,
+    //   flickr: `zachhale`,
+    // },
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -46,6 +47,16 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          {
+            resolve: 'gatsby-remark-emoji', // <-- this adds emoji
+            options: {
+              // default emojiConversion --> shortnameToUnicode
+              emojiConversion: 'shortnameToUnicode',
+              // when true, matches ASCII characters (in unicodeToImage and shortnameToImage)
+              // e.g. ;) --> 😉
+              ascii: false,
+            }
+          }
         ],
       },
     },
@@ -105,7 +116,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            title: "Underbiking RSS Feed",
           },
         ],
       },
@@ -113,15 +124,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Underbiking`,
+        short_name: `Underbiking`,
         start_url: `/`,
         background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/zachhale-icon.jpg`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,
